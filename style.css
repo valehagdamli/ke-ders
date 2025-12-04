@@ -1,0 +1,176 @@
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+          background-color: #f4f4f4;
+          color: #333;
+          line-height: 1.6;
+}
+
+/* Naviqasiya Paneli (Header) */
+header {
+          background-color: #003366;
+          /* Kamaz Göyü */
+          color: white;
+          padding: 1rem 5%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+}
+
+nav ul {
+          list-style: none;
+          display: flex;
+          gap: 20px;
+}
+
+nav a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s;
+}
+
+nav a:hover {
+          color: #ff6600;
+          /* Vurğu rəngi */
+}
+
+/* Hero Bölməsi (Əsas Şəkil) */
+.hero {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1605218427306-635ba2439af2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+          background-size: cover;
+          background-position: center;
+          height: 80vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: white;
+          padding: 0 20px;
+}
+
+.hero h1 {
+          font-size: 3rem;
+          margin-bottom: 10px;
+}
+
+.hero p {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+          max-width: 600px;
+}
+
+.btn {
+          background-color: #ff6600;
+          color: white;
+          padding: 10px 25px;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.3s;
+          cursor: pointer;
+}
+
+.btn:hover {
+          background-color: #e65c00;
+}
+
+/* Modellər Bölməsi (Grid Sistemi) */
+.container {
+          max-width: 1200px;
+          margin: 50px auto;
+          padding: 0 20px;
+}
+
+.section-title {
+          text-align: center;
+          margin-bottom: 40px;
+          color: #003366;
+          font-size: 2rem;
+}
+
+.models-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+}
+
+.card {
+          background: white;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+}
+
+.card:hover {
+          transform: translateY(-10px);
+}
+
+.card-img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          background-color: #ddd;
+          /* Şəkil yüklənməzsə */
+}
+
+.card-content {
+          padding: 20px;
+}
+
+.card-title {
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+          color: #003366;
+}
+
+.card-specs {
+          list-style: none;
+          margin-bottom: 15px;
+          font-size: 0.9rem;
+          color: #666;
+}
+
+.card-specs li {
+          margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+          background-color: #1a1a1a;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          margin-top: 50px;
+}
+
+/* Responsive Dizayn (Mobil üçün) */
+@media (max-width: 768px) {
+          .hero h1 {
+                    font-size: 2rem;
+          }
+
+          header {
+                    flex-direction: column;
+                    gap: 10px;
+          }
+}
